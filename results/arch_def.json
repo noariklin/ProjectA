@@ -1,0 +1,63 @@
+﻿NoNewNet(
+  (lastConv): Conv3d(30, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+  (encoders): ModuleList(
+    (0): EncoderModule(
+      (conv1): Conv3d(4, 30, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 30, eps=1e-05, affine=True)
+      (conv2): Conv3d(30, 30, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 30, eps=1e-05, affine=True)
+    )
+    (1): EncoderModule(
+      (conv1): Conv3d(30, 60, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 60, eps=1e-05, affine=True)
+      (conv2): Conv3d(60, 60, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 60, eps=1e-05, affine=True)
+    )
+    (2): EncoderModule(
+      (conv1): Conv3d(60, 120, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 120, eps=1e-05, affine=True)
+      (conv2): Conv3d(120, 120, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 120, eps=1e-05, affine=True)
+    )
+    (3): EncoderModule(
+      (conv1): Conv3d(120, 240, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 240, eps=1e-05, affine=True)
+      (conv2): Conv3d(240, 240, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 240, eps=1e-05, affine=True)
+    )
+    (4): EncoderModule(
+      (conv1): Conv3d(240, 480, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 480, eps=1e-05, affine=True)
+    )
+  )
+  (decoders): ModuleList(
+    (0): DecoderModule(
+      (conv2): Conv3d(480, 240, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 240, eps=1e-05, affine=True)
+    )
+    (1): DecoderModule(
+      (conv1): Conv3d(240, 240, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 240, eps=1e-05, affine=True)
+      (conv2): Conv3d(240, 120, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 120, eps=1e-05, affine=True)
+    )
+    (2): DecoderModule(
+      (conv1): Conv3d(120, 120, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 120, eps=1e-05, affine=True)
+      (conv2): Conv3d(120, 60, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 60, eps=1e-05, affine=True)
+    )
+    (3): DecoderModule(
+      (conv1): Conv3d(60, 60, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 60, eps=1e-05, affine=True)
+      (conv2): Conv3d(60, 30, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 30, eps=1e-05, affine=True)
+    )
+    (4): DecoderModule(
+      (conv1): Conv3d(30, 30, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn1): GroupNorm(30, 30, eps=1e-05, affine=True)
+      (conv2): Conv3d(30, 30, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1), bias=False)
+      (gn2): GroupNorm(30, 30, eps=1e-05, affine=True)
+    )
+  )
+)
